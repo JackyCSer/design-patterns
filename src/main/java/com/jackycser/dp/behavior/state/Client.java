@@ -1,4 +1,4 @@
-package com.jackycser.dp.state;
+package com.jackycser.dp.behavior.state;
 
 /**
  * @author Jacky Zhang

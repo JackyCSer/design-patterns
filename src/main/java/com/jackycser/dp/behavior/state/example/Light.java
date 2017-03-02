@@ -1,32 +1,34 @@
-package com.jackycser.dp.state;
+package com.jackycser.dp.behavior.state.example;
 
 /**
  * @author Jacky Zhang
- * @since 06/02/2017
+ * @since 07/02/2017
  */
-public class Context {
+public class Light {
 
     private State state;
 
-    public void change() {
+    private void change() {
         state.change(this);
     }
 
+    public void work() {
+        while (true) {
+            change();
+        }
+    }
 
-    public Context(State state) {
+    public Light(State state) {
         super();
         this.state = state;
     }
-
 
     public State getState() {
         return state;
     }
 
-
     public void setState(State state) {
         this.state = state;
     }
-
 
 }
